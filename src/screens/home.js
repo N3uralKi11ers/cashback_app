@@ -1,18 +1,23 @@
 import React from 'react'
-import {View, Text, TouchableOpacity, ScrollView, StyleSheet} from 'react-native'
+import {View, Text, Pressable, ScrollView, StyleSheet} from 'react-native'
 import MiniCard from '../components/miniCard'
 import CardMIR from '../components/home/cardMIR'
 import Cell from '../components/home/cell'
 
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 const Name = () => {
+
+    // Use API
+
     return 'Михаил' + ' 👋'
 }
 
 const UserCard = () => {
     return (
-        <TouchableOpacity style={[styles.shadow, styles.userCard]}>
-            
-        </TouchableOpacity>
+        <Pressable style={[styles.shadow, styles.userCard]}>
+            <Icon name={'user'} size={40} color={'white'} />
+        </Pressable>
     )
 }
 
@@ -30,6 +35,7 @@ const ReccomendationList = () => {
 }
 
 const CardMIRList = () => {
+
     // Use API
 
     const list = [
@@ -92,6 +98,9 @@ const styles = StyleSheet.create({
         borderRadius: 16, 
         marginVertical: 10, 
         marginRight: 10,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     title: {
         fontSize: 30,
