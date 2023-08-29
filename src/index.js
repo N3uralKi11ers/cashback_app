@@ -7,17 +7,10 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 // Screens
 import HomeScreen from './screens/home'
-import AccumulationScreen from './screens/accumulation';
+import StatisticsScreen from './screens/statistics';
 import CashbackScreen from './screens/cashback';
 import BotScreen from './screens/bot';
 import HistoryScreen from './screens/history';
-
-// // Icons
-// import HomeIcon from './assets/tab_bar_icons/home.svg';
-// import AccumulationIcon from './assets/tab_bar_icons/accumulation.svg';
-// import CashbackIcon from './assets/tab_bar_icons/cashback.svg';
-// import BotIcon from './assets/tab_bar_icons/bot.svg';
-// import HistoryIcon from './assets/tab_bar_icons/history.svg';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,8 +26,8 @@ export default function App() {
                 case 'Главная':
                     iconName = 'home'
                     break;
-                case 'Накопления':
-                    iconName = 'coins'
+                case 'Статистика':
+                    iconName = 'chart-pie'
                     break;
                 case 'Кэшбек':
                     iconName = 'wallet'
@@ -43,7 +36,7 @@ export default function App() {
                     iconName = 'robot'
                     break;
                 case 'История':
-                    iconName = 'chart-pie'
+                    iconName = 'coins'
                     break;
                 default:
                     break;
@@ -62,7 +55,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Главная" component={HomeScreen} />
-        <Tab.Screen name="Накопления" component={AccumulationScreen} />
+        <Tab.Screen name="Статистика" component={StatisticsScreen} />
         <Tab.Screen name="Кэшбек" component={CashbackScreen} />
         <Tab.Screen name="Ассистент" component={BotScreen} />
         <Tab.Screen name="История" component={HistoryScreen} />
