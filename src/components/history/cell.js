@@ -7,7 +7,7 @@ const Cell = function({to, type, amount}) {
                 <Text style={styles.title}>{to}</Text>
                 <Text style={{flex: 2}}>{type}</Text>
             </View>
-            <Text style={styles.price}>{amount}</Text>
+            <Text style={styles.price}>{amount} ₽</Text>
         </View>
     )
 }
